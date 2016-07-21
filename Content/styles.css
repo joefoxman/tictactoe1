@@ -1,0 +1,162 @@
+body {
+	background-color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+footer {
+    background:#ffab62;
+    width:100%;
+    height:25px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    padding-left:10px;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-link:hover, .btn-link:focus {
+    cursor: pointer;
+}
+
+
+#first-player-label {
+    margin-top: 20px;
+}
+
+#first-player {
+    width: 200px;
+}
+
+.align-middle { 
+    display: table;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+table { 
+  border-collapse: collapse; 
+  border-spacing: 0; 
+}
+
+#board { 
+  padding: 0px; 
+  margin: 0 auto; 
+  margin-top: 25px; 
+}
+
+#board tr td { 
+  width: 80px; 
+  height: 80px; 
+  border: 1px solid #1c1c1c; 
+  font-family: Helvetica; 
+  font-size: 30px; 
+  text-align: center; 
+  background: #cce5ff;
+  z-index: -1;
+}
+ 
+#board tr td:hover { 
+  background: #ff1ab3; 
+  cursor: pointer; 
+}
+
+.win { 
+  background-color: #4dff88 !important; 
+  cursor: pointer; 
+}
+
+
+.horizontal-line-center{
+    margin:0;padding:0 10px;
+    background:#fff;
+}
+
+td.horizontal-line-center{
+    text-align:center;
+    position:relative;
+    z-index:0;
+}
+td.horizontal-line-center::after {
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+    right:0;
+    border-top:solid 1px red;
+    z-index:0;
+}
+
+.vertical-line-center{
+    margin:0;padding:0 10px;
+    background:#fff;
+}
+
+td.vertical-line-center{
+    text-align:center;
+    position:relative;
+    z-index:0;
+}
+
+td.vertical-line-center::after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    right:0;
+    bottom:0;
+    border-left: 1px solid red;
+    z-index:0;
+}
+
+.diagnoal-right-line{
+    margin:0;padding:0 10px;
+    background:#fff;
+}
+
+td.diagnoal-right-line{
+    text-align:center;
+    position:relative;
+    z-index:0;
+}
+
+td.diagnoal-right-line::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 49%;
+    bottom: -20%;
+    border-left: 1px solid red;
+    z-index: 0;
+    transform: rotate(135deg);
+}
+
+.diagnoal-left-line{
+    margin:0;padding:0 10px;
+    background:#fff;
+}
+
+td.diagnoal-left-line{
+    text-align:center;
+    position:relative;
+    z-index:0;
+}
+
+td.diagnoal-left-line::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 49%;
+    bottom: -20%;
+    border-left: 1px solid red;
+    z-index: 0;
+    transform: rotate(45deg);
+}
